@@ -1,14 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription & Contact | AfriConnect Summit 2026</title>
+    <title>Contact | AfriConnect Summit 2026</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="bi bi-globe-africa"></i>
+                <span>AfriConnect <strong>Summit</strong></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Changer de thème">🌙</button>
+                <button id="hamburger" aria-label="Ouvrir le menu">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-interne">
+            <h1>Contact</h1>
+            <nav aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> &gt; <span>Contact</span>
+            </nav>
+        </section>
+
+        <section class="inscription">
+            <div class="inscription-container">
+
+                <form id="form-inscription" class="form-inscription" novalidate>
+                    <h2>Formulaire d'inscription</h2>
+
+                    <div class="form-group">
+                        <label for="nom">Nom complet <span class="required">*</span></label>
+                        <input type="text" id="nom" name="nom" required>
+                        <span class="error-message" id="error-nom"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Téléphone <span class="required">*</span></label>
+                        <input type="tel" id="telephone" name="telephone" required>
+                        <span class="error-message" id="error-telephone"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="participation">Type de participation <span class="required">*</span></label>
+                        <select id="participation" name="participation" required>
+                            <option value="">-- Choisissez --</option>
+                            <option value="participant">Participant</option>
+                            <option value="intervenant">Intervenant</option>
+                            <option value="sponsor">Sponsor</option>
+                            <option value="presse">Presse</option>
+                        </select>
+                        <span class="error-message" id="error-participation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pays">Pays <span class="required">*</span></label>
+                        <select id="pays" name="pays" required>
+                            <option value="">-- Choisissez --</option>
+                            <option value="senegal">Sénégal</option>
+                            <option value="cote-ivoire">Côte d'Ivoire</option>
+                            <option value="ghana">Ghana</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="rwanda">Rwanda</option>
+                            <option value="mali">Mali</option>
+                            <option value="cameroun">Cameroun</option>
+                            <option value="benin">Bénin</option>
+                            <option value="togo">Togo</option>
+                            <option value="burkina-faso">Burkina Faso</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="maroc">Maroc</option>
+                        </select>
+                        <span class="error-message" id="error-pays"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message / Motivation <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+
+                    <div class="success-message" id="success-message">
+                        Votre inscription a bien été envoyée ! Nous vous recontacterons rapidement.
+                    </div>
+                </form>
+
+                <div class="inscription-infos">
+                    <h2>Informations pratiques</h2>
+                    <ul>
+                        <li><i class="bi bi-geo-alt-fill"></i> Kigali, Rwanda</li>
+                        <li><i class="bi bi-calendar-event-fill"></i> 12-14 mars 2026</li>
+                        <li><i class="bi bi-envelope-fill"></i> contact@africonnectsummit.com</li>
+                        <li><i class="bi bi-telephone-fill"></i> +250 700 000 000</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Questions fréquentes</h2>
+
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1" class="faq-toggle">
+                    <label for="faq1" class="faq-question">Comment puis-je m'inscrire à la conférence ?</label>
+                    <div class="faq-reponse">
+                        <p>Remplissez le formulaire d'inscription ci-dessus en indiquant votre type de participation.
+                            Vous recevrez une confirmation par email sous 48h.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <input type="checkbox" id="faq2" class="faq-toggle">
+                    <label for="faq2" class="faq-question">Le billet inclut-il les repas ?</label>
+                    <div class="faq-reponse">
+                        <p>Oui, le billet standard inclut le déjeuner et les pauses café pour les 3 jours de conférence.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <input type="checkbox" id="faq3" class="faq-toggle">
+                    <label for="faq3" class="faq-question">Puis-je annuler mon inscription ?</label>
+                    <div class="faq-reponse">
+                        <p>Les annulations sont possibles jusqu'à 15 jours avant l'événement, avec remboursement
+                            intégral.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <input type="checkbox" id="faq4" class="faq-toggle">
+                    <label for="faq4" class="faq-question">Comment devenir intervenant ?</label>
+                    <div class="faq-reponse">
+                        <p>Sélectionnez "Intervenant" dans le formulaire et détaillez votre proposition de session dans
+                            le champ message.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <input type="checkbox" id="faq5" class="faq-toggle">
+                    <label for="faq5" class="faq-question">Y a-t-il un tarif réduit pour les étudiants ?</label>
+                    <div class="faq-reponse">
+                        <p>Oui, un tarif étudiant à -50% est disponible sur présentation d'une carte étudiante valide.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="carte">
+            <h2>Nous trouver</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.6!2d30.0443!3d-1.9441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0x18eb9532b4a4525c!2sKigali%2C%20Rwanda!5e0!3m2!1sfr!2srw!4v1234567890"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                title="Localisation AfriConnect Summit - Kigali, Rwanda">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect Summit</h3>
+                <p>La conférence tech panafricaine qui connecte développeurs, entrepreneurs et investisseurs du
+                    continent.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="back-to-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
