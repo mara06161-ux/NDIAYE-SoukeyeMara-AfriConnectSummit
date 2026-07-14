@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,150 @@
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="bi bi-globe-africa"></i>
+                <span>AfriConnect <strong>Summit</strong></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Changer de thème">🌙</button>
+                <button id="hamburger" aria-label="Ouvrir le menu">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-interne">
+            <h1>Intervenants</h1>
+            <nav aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> &gt; <span>Intervenants</span>
+            </nav>
+        </section>
+
+        <section class="filtres">
+            <div class="filtres-container" role="group" aria-label="Filtrer les intervenants par thématique">
+                <button class="filtre-btn active" data-filtre="tous">Tous</button>
+                <button class="filtre-btn" data-filtre="ia-tech">IA & Tech</button>
+                <button class="filtre-btn" data-filtre="business">Business</button>
+                <button class="filtre-btn" data-filtre="design">Design</button>
+                <button class="filtre-btn" data-filtre="data">Data</button>
+            </div>
+        </section>
+
+        <section class="intervenants-liste">
+            <div class="intervenants-grid-complete">
+
+                <article class="intervenant-card" data-thematique="ia-tech">
+                    <img src="images/speaker1.jpg" alt="Photo de Amina Diallo, intervenante">
+                    <h3>Amina Diallo</h3>
+                    <p class="intervenant-specialite">Intelligence Artificielle</p>
+                    <p class="intervenant-pays">Sénégal</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="business">
+                    <img src="images/speaker2.jpg" alt="Photo de Kwame Mensah, intervenant">
+                    <h3>Kwame Mensah</h3>
+                    <p class="intervenant-specialite">Entrepreneuriat & FinTech</p>
+                    <p class="intervenant-pays">Ghana</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="business">
+                    <img src="images/speaker3.jpg" alt="Photo de Fatou Ndiaye, intervenante">
+                    <h3>Fatou Ndiaye</h3>
+                    <p class="intervenant-specialite">Investissement</p>
+                    <p class="intervenant-pays">Côte d'Ivoire</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="ia-tech">
+                    <img src="images/speaker4.jpg" alt="Photo de Jean-Paul Kamau, intervenant">
+                    <h3>Jean-Paul Kamau</h3>
+                    <p class="intervenant-specialite">AgriTech & Data</p>
+                    <p class="intervenant-pays">Rwanda</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="design">
+                    <img src="images/Aicha Traoré.jpg" alt="Photo de Aïcha Traoré, intervenante">
+                    <h3>Aïcha Traoré</h3>
+                    <p class="intervenant-specialite">Design UX/UI</p>
+                    <p class="intervenant-pays">Mali</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="data">
+                    <img src="images/samuel owusu.jpg" alt="Photo de Samuel Owusu, intervenant">
+                    <h3>Samuel Owusu</h3>
+                    <p class="intervenant-specialite">Data Science</p>
+                    <p class="intervenant-pays">Nigeria</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="ia-tech">
+                    <img src="images/Grace uwimana.jpg" alt="Photo de Grace Uwimana, intervenante">
+                    <h3>Grace Uwimana</h3>
+                    <p class="intervenant-specialite">Cybersécurité</p>
+                    <p class="intervenant-pays">Rwanda</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="design">
+                    <img src="images/Moussa Diop.jpg" alt="Photo de Moussa Diop, intervenant">
+                    <h3>Moussa Diop</h3>
+                    <p class="intervenant-specialite">Design System</p>
+                    <p class="intervenant-pays">Sénégal</p>
+                </article>
+
+                <article class="intervenant-card" data-thematique="data">
+                    <img src="images/Chidinma Eze.jpg" alt="Photo de Chidinma Eze, intervenante">
+                    <h3>Chidinma Eze</h3>
+                    <p class="intervenant-specialite">Souveraineté numérique</p>
+                    <p class="intervenant-pays">Nigeria</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>AfriConnect Summit</h3>
+                <p>La conférence tech panafricaine qui connecte développeurs, entrepreneurs et investisseurs du
+                    continent.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="back-to-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
