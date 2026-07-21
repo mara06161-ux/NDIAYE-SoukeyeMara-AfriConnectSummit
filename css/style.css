@@ -697,3 +697,352 @@ footer {
 #back-to-top:hover {
     transform: translateY(-4px);
 }
+
+/* ===========================
+   PROGRAMME - ONGLETS
+   =========================== */
+.programme-onglets {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.onglets-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.onglet-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    border-bottom: 3px solid transparent;
+    transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.onglet-btn:hover {
+    color: var(--color-accent);
+}
+
+.onglet-btn.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+.onglet-contenu {
+    display: none;
+}
+
+.onglet-contenu.active {
+    display: block;
+    animation: fade-slide-up 0.5s ease;
+}
+
+/* ===========================
+   TABLEAU PLANNING
+   =========================== */
+.planning-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.planning-table th {
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.planning-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.planning-table tbody tr:nth-child(even) {
+    background-color: var(--color-bg);
+}
+
+.planning-table tbody tr:hover {
+    background-color: var(--color-border);
+}
+
+/* ===========================
+   THEMATIQUES (Grid 2x2)
+   =========================== */
+.thematiques {
+    text-align: center;
+}
+
+.thematiques-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.thematique-card {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: transform var(--transition-speed);
+}
+
+.thematique-card:hover {
+    transform: translateY(-6px);
+}
+
+.thematique-card i {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.thematique-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   FILTRES INTERVENANTS
+   =========================== */
+.filtres {
+    text-align: center;
+}
+
+.filtres-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.filtre-btn {
+    padding: 0.6rem 1.4rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.filtre-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.filtre-btn.active {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+
+.intervenant-specialite {
+    padding: 0 var(--spacing-md);
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   INSCRIPTION / FORMULAIRE
+   =========================== */
+.inscription-container {
+    display: flex;
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.form-inscription {
+    flex: 2;
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+}
+
+.form-inscription h2 {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.6rem;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.required {
+    color: #d64545;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* États de validation (basculés par le futur JS) */
+.form-group input.valid,
+.form-group select.valid,
+.form-group textarea.valid {
+    border-color: #4caf50;
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: #d64545;
+}
+
+.error-message {
+    display: block;
+    color: #d64545;
+    font-size: 0.8rem;
+    margin-top: var(--spacing-sm);
+    min-height: 1.2em;
+}
+
+.success-message {
+    display: none;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: #4caf5020;
+    border: 1px solid #4caf50;
+    color: #4caf50;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.success-message.visible {
+    display: block;
+}
+
+/* ===========================
+   INFOS PRATIQUES
+   =========================== */
+.inscription-infos {
+    flex: 1;
+    padding: var(--spacing-xl);
+    background-color: var(--color-accent);
+    color: #fff;
+    border-radius: var(--radius-md);
+    position: sticky;
+    top: 100px;
+}
+
+.inscription-infos h2 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.inscription-infos ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===========================
+   FAQ ACCORDÉON (CSS PUR)
+   =========================== */
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-container {
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg) 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.faq-question:hover {
+    color: var(--color-accent);
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    transition: transform var(--transition-speed);
+}
+
+.faq-reponse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed), padding var(--transition-speed);
+}
+
+.faq-reponse p {
+    padding-bottom: var(--spacing-lg);
+    color: var(--color-text-secondary);
+}
+
+/* Quand la checkbox est cochée : on ouvre la réponse et on tourne le + en x */
+.faq-toggle:checked~.faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-toggle:checked~.faq-reponse {
+    max-height: 300px;
+}
+
+/* ===========================
+   CARTE
+   =========================== */
+.carte {
+    text-align: center;
+}
+
+.carte iframe {
+    max-width: 1000px;
+    width: 100%;
+    border-radius: var(--radius-md);
+}
