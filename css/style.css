@@ -1046,3 +1046,165 @@ footer {
     width: 100%;
     border-radius: var(--radius-md);
 }
+/* ===========================
+   RESPONSIVE - TABLETTE (max 1024px)
+   =========================== */
+@media (max-width: 1024px) {
+    .stats-grid,
+    .intervenants-grid,
+    .intervenants-grid-complete {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .raisons-container {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* ===========================
+   RESPONSIVE - TABLETTE (max 768px)
+   =========================== */
+@media (max-width: 768px) {
+    /* Menu hamburger */
+    .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-bg-secondary);
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: transform var(--transition-speed), opacity var(--transition-speed);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    /* Hero */
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #countdown {
+        gap: var(--spacing-md);
+    }
+
+    #countdown span {
+        font-size: 1.8rem;
+    }
+
+    /* Grids en 1 colonne */
+    .stats-grid,
+    .intervenants-grid,
+    .intervenants-grid-complete,
+    .thematiques-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sponsors : logos plus petits */
+    .sponsor-or .sponsor-logos img {
+        height: 60px;
+    }
+
+    .sponsor-argent .sponsor-logos img {
+        height: 45px;
+    }
+
+    .sponsor-bronze .sponsor-logos img {
+        height: 35px;
+    }
+
+    /* Footer en colonne */
+    .footer-container {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+
+    /* Formulaire contact en 1 colonne */
+    .inscription-container {
+        flex-direction: column;
+    }
+
+    .inscription-infos {
+        position: static;
+        width: 100%;
+    }
+
+    /* Onglets programme */
+    .onglets-nav {
+        flex-wrap: wrap;
+    }
+
+    .planning-table {
+        font-size: 0.85rem;
+    }
+
+    .planning-table th,
+    .planning-table td {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ===========================
+   RESPONSIVE - MOBILE (max 480px)
+   =========================== */
+@media (max-width: 480px) {
+    section {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-location {
+        font-size: 0.9rem;
+    }
+
+    #countdown {
+        flex-wrap: wrap;
+    }
+
+    .form-inscription,
+    .inscription-infos {
+        padding: var(--spacing-lg);
+    }
+
+    /* Tableau planning scrollable horizontalement plutôt qu'écrasé */
+    .onglet-contenu {
+        overflow-x: auto;
+    }
+
+    .planning-table {
+        min-width: 500px;
+    }
+}
