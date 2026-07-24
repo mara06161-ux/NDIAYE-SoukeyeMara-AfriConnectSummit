@@ -48,13 +48,18 @@
         </section>
 
         <section class="programme-onglets">
-            <div class="onglets-nav" role="tablist" aria-label="Jours de la conférence">
-                <button class="onglet-btn active" data-jour="jour1" role="tab" aria-selected="true">Jour 1</button>
-                <button class="onglet-btn" data-jour="jour2" role="tab" aria-selected="false">Jour 2</button>
-                <button class="onglet-btn" data-jour="jour3" role="tab" aria-selected="false">Jour 3</button>
-            </div>
+            <h2 class="visually-hidden">Planning de la conférence</h2>
 
-            <div class="onglet-contenu active" id="jour1" role="tabpanel">
+            <div class="onglets-nav" role="tablist" aria-label="Jours de la conférence">
+                <button id="tab-jour1" class="onglet-btn active" data-jour="jour1" role="tab" aria-selected="true"
+                    aria-controls="jour1">Jour 1</button>
+                <button id="tab-jour2" class="onglet-btn" data-jour="jour2" role="tab" aria-selected="false"
+                    aria-controls="jour2">Jour 2</button>
+                <button id="tab-jour3" class="onglet-btn" data-jour="jour3" role="tab" aria-selected="false"
+                    aria-controls="jour3">Jour 3</button>
+            </div>
+            <div class="onglet-contenu active" id="jour1" role="tabpanel" aria-labelledby="tab-jour1">
+
                 <table class="planning-table">
                     <thead>
                         <tr>
@@ -105,7 +110,8 @@
                 </table>
             </div>
 
-            <div class="onglet-contenu" id="jour2" role="tabpanel">
+            <div class="onglet-contenu" id="jour2" role="tabpanel" aria-labelledby="tab-jour2">
+
                 <table class="planning-table">
                     <thead>
                         <tr>
@@ -156,56 +162,56 @@
                 </table>
             </div>
 
-            <div class="onglet-contenu" id="jour3" role="tabpanel">
-                <table class="planning-table">
-                    <thead>
-                        <tr>
-                            <th>Heure</th>
-                            <th>Session</th>
-                            <th>Intervenant</th>
-                            <th>Salle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>09h00 - 09h45</td>
-                            <td>Scaler sa startup à l'international</td>
-                            <td>Jean-Paul Kamau</td>
-                            <td>Salle A</td>
-                        </tr>
-                        <tr>
-                            <td>10h00 - 10h45</td>
-                            <td>Open source et écosystème africain</td>
-                            <td>Kwame Mensah</td>
-                            <td>Salle B</td>
-                        </tr>
-                        <tr>
-                            <td>11h00 - 11h45</td>
-                            <td>Femmes leaders dans la tech</td>
-                            <td>Fatou Ndiaye</td>
-                            <td>Salle A</td>
-                        </tr>
-                        <tr>
-                            <td>12h00 - 12h45</td>
-                            <td>Table ronde : L'Afrique en 2030</td>
-                            <td>Plusieurs intervenants</td>
-                            <td>Salle A</td>
-                        </tr>
-                        <tr>
-                            <td>14h00 - 14h45</td>
-                            <td>Remise des prix startups</td>
-                            <td>Amina Diallo</td>
-                            <td>Salle A</td>
-                        </tr>
-                        <tr>
-                            <td>15h00 - 15h30</td>
-                            <td>Discours de clôture</td>
-                            <td>Amina Diallo</td>
-                            <td>Salle A</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="onglet-contenu" id="jour3" role="tabpanel" aria-labelledby="tab-jour3"></div>
+            <table class="planning-table">
+                <thead>
+                    <tr>
+                        <th>Heure</th>
+                        <th>Session</th>
+                        <th>Intervenant</th>
+                        <th>Salle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09h00 - 09h45</td>
+                        <td>Scaler sa startup à l'international</td>
+                        <td>Jean-Paul Kamau</td>
+                        <td>Salle A</td>
+                    </tr>
+                    <tr>
+                        <td>10h00 - 10h45</td>
+                        <td>Open source et écosystème africain</td>
+                        <td>Kwame Mensah</td>
+                        <td>Salle B</td>
+                    </tr>
+                    <tr>
+                        <td>11h00 - 11h45</td>
+                        <td>Femmes leaders dans la tech</td>
+                        <td>Fatou Ndiaye</td>
+                        <td>Salle A</td>
+                    </tr>
+                    <tr>
+                        <td>12h00 - 12h45</td>
+                        <td>Table ronde : L'Afrique en 2030</td>
+                        <td>Plusieurs intervenants</td>
+                        <td>Salle A</td>
+                    </tr>
+                    <tr>
+                        <td>14h00 - 14h45</td>
+                        <td>Remise des prix startups</td>
+                        <td>Amina Diallo</td>
+                        <td>Salle A</td>
+                    </tr>
+                    <tr>
+                        <td>15h00 - 15h30</td>
+                        <td>Discours de clôture</td>
+                        <td>Amina Diallo</td>
+                        <td>Salle A</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
 
         <section class="thematiques">
